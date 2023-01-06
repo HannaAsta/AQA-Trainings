@@ -10,7 +10,14 @@ namespace candidate
         {
             this.score = score_;
             this.subject = subject_;
-
+        }
+        public string Getsubject()
+        { 
+            return subject;
+        }
+        public int Getscore() 
+        {
+            return score;
         }
     }
 }

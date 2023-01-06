@@ -12,6 +12,11 @@
             this.numberlokal = numberlokal_;
             this.street= street_;
             this.city= city_;   
-                    }
+        }
+        public string Getstreet()
+        { 
+            return street;
+        }
     }
+
 }

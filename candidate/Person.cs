@@ -11,7 +11,10 @@
             first = firstName;
             address = addr;
         }
- 
+        public string Getstreet()
+        {
+            return address.Getstreet();
+        }
        
     }
 }
