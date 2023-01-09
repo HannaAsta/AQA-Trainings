@@ -10,11 +10,10 @@ namespace Task2University
     {
         string Sciencedegree;
         string Degree;
-        public DegreeTeacher(Person person, long taxID, string course, string Sciencedegree, string Degree) : base (person, taxID, course)
+        public DegreeTeacher(Person person, long taxID, string[] course, string Sciencedegree, string Degree) : base (person, taxID, course)
         {
             this.Sciencedegree = Sciencedegree;
             this.Degree= Degree;
-
         }               
     }
 }

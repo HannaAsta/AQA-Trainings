@@ -8,12 +8,19 @@ namespace Task2University
 {
     public class Teacher : UniversityEmployee
     {
-        public string course;
-        public Teacher(Person person, long taxID, string course): base (person,taxID)
+
+        public string[] course;
+                
+        public Teacher(Person person, long taxID, string[] course): base (person,taxID)
         {            
             this.course = course;
+
         }
 
+        public override string GetOfficialDuties()
+        {
+            return string.Join(", ",course);
+        }
     }
-         
+
 }
