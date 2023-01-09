@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task2University
+﻿namespace Task2University
 {
     public class Person
     {
@@ -16,6 +9,9 @@ namespace Task2University
                 last = lastName;
                 first = firstName;
         }
+        public string GetName()
+        {
+            return $"{last} {first}";
+        }
     }
-
 }

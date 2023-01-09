@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task2University
+﻿namespace Task2University
 {
     public class UniversityEmployee
     {
         
-         
         public Person person;
         public long taxiID;
 
@@ -23,8 +15,10 @@ namespace Task2University
         {
             return "Go to work";
         }
-
-
+        public string GetPersonName()
+        {
+            return person.GetName();
+        }
     }
 
 }

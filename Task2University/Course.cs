@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task2University
+﻿namespace Task2University
 {
     public class Course
     {
-        string Name;
-        string Descript;
-        public Course(string courseName, string courseDescript)
+        public string Name { get; private set; }
+        public string Description { get; private set; }
+        
+        public Course(string name, string descript)
         {
-            Name = courseName;   
-            Descript = courseDescript;
+            Name = name;   
+            Description = descript;
         }
     }
 }
