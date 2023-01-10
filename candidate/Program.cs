@@ -1,9 +1,4 @@
-﻿using System.IO;
-using System.Net.Sockets;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-
-namespace candidate
+﻿namespace candidate
 {
     internal class Program
     {
@@ -42,18 +37,22 @@ namespace candidate
 
 
 
-            Candidate[] candidates = {candidate1, candidate2, candidate3, candidate4, candidate5};
+            Candidate[] candidates = {
+                candidate1,
+                candidate2,
+                candidate3,
+                candidate4,
+                candidate5};
 
             foreach (Candidate candidate in candidates)
             {
-                string street = candidate.GetStreet();
-                Console.WriteLine(street);
+                Console.WriteLine(candidate.Street);
             }
 
             int maxScore = 0;
             foreach (Candidate candidate in candidates)
             {
-                int score = candidate.Getscore("phyz");
+                int score = candidate.GetScore("phyz");
                 if (maxScore < score)
                     maxScore = score;
             }

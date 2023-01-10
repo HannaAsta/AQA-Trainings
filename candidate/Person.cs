@@ -2,19 +2,15 @@
 {
     public class Person
     {
-      private string last;
-      private string first;
-      Address address;
-        public Person(string lastName, string firstName, Address addr)
+        public string Last { get; private set; }
+        public string First { get; private set; }
+        public Address Address { get; private set; }
+
+        public Person(string lastName, string firstName, Address address)
         {
-            last = lastName;
-            first = firstName;
-            address = addr;
+            Last = lastName;
+            First = firstName;
+            Address = address;
         }
-        public string Getstreet()
-        {
-            return address.Getstreet();
-        }
-       
     }
 }

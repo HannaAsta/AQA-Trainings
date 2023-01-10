@@ -2,20 +2,18 @@
 {
     public class Address
     {
-        int numberhome;
-        int numberlokal;
-        string street;
-        string city;
-        public Address(int numberhome_,int numberlokal_, string street_, string city_)
+        public uint NumberHome { get; private set; }
+        public uint NumberLokal { get; private set; } 
+        public string Street { get; private set; }
+        public string City { get; private set; }
+    
+        
+        public Address(uint numberHome, uint numberLokal, string street, string city)
         {
-            this.numberhome = numberhome_;
-            this.numberlokal = numberlokal_;
-            this.street= street_;
-            this.city= city_;   
-        }
-        public string Getstreet()
-        { 
-            return street;
+            NumberHome = numberHome;
+            NumberLokal = numberLokal;
+            Street = street;
+            City = city;   
         }
     }
 

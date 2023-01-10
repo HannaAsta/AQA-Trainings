@@ -1,23 +1,14 @@
-﻿using System;
-
-namespace candidate
+﻿namespace candidate
 {
     public class SubjectScore
     {
-        int score;
-        string subject;
-        public SubjectScore(int score_, string subject_)
+        public ushort Score { get; private set; }
+        public string Subject { get; private set; }
+
+        public SubjectScore(ushort score, string subject)
         {
-            this.score = score_;
-            this.subject = subject_;
-        }
-        public string Getsubject()
-        { 
-            return subject;
-        }
-        public int Getscore() 
-        {
-            return score;
+            Score = score;
+            Subject = subject;
         }
     }
 }

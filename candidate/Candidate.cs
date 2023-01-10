@@ -1,37 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace candidate
+﻿namespace candidate
 {
     public class Candidate
     {
         Person person;
-        SubjectScore[] Score;
+        SubjectScore[] score;
 
-        public Candidate(Person person_, SubjectScore[] scr)
+        public string Street
         {
-            person = person_;
-            Score = scr;
-        }
-        public string GetStreet()
-        {
-            return person.Getstreet();
-        }
-
-        public int Getscore(string namesub)
-        {
-            foreach (SubjectScore score in Score)
+            get 
             {
-                if (score.Getsubject() == namesub)
-                    return score.Getscore();         
+                return person.Address.Street;
+            }
+        }
+
+        public Candidate(Person person, SubjectScore[] score)
+        {
+            this.person = person;
+            this.score = score;
+        }
+       
+        public int GetScore(string nameSub)
+        {
+            foreach (SubjectScore score in score)
+            {
+                if (score.Subject == nameSub)
+                    return score.Score;         
             }
             return 0;
-        }
-            
+        }   
     }
     
 }
