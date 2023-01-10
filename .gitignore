@@ -2,15 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/candidate/obj
-/.vs/AQA-Trainings/FileContentIndex
-/.vs/AQA-Trainings/v17/.suo
-/.vs/AQA-Trainings/v17/.wsuo
-/.vs/ProjectSettings.json
-/.vs/slnx.sqlite
-/.vs/VSWorkspaceState.json
-/.vs/AQA-Trainings/v17/.suo
-/.vs/AQA-Trainings/v17/.wsuo
-/.vs/ProjectSettings.json
-/.vs/slnx.sqlite
-/.vs/VSWorkspaceState.json
+/candidate/obj/*
+/candidate/bin/*
+/.vs/*
+/.vs
