@@ -1,4 +1,4 @@
-﻿namespace candidate
+﻿namespace Candidate
 {
     public class Address
     {

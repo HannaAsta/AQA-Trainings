@@ -1,9 +1,9 @@
-﻿namespace candidate
+﻿namespace Candidate
 {
     public class Candidate
     {
-        Person person;
-        SubjectScore[] score;
+        private Person person;
+        private SubjectScore[] score;
 
         public string Street
         {
@@ -19,7 +19,7 @@
             this.score = score;
         }
        
-        public int GetScore(string nameSub)
+        public uint GetScore(string nameSub)
         {
             foreach (SubjectScore score in score)
             {
