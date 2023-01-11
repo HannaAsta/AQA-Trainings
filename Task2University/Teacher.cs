@@ -2,16 +2,24 @@
 {
     public class Teacher : UniversityEmployee
     {
-        public Course[] courses;
-                     
-        public Teacher(Person person, long taxID, Course[] courses): base (person,taxID)
+        private Course[] courses;
+
+        public override string PersonInfo
+        {
+            get
+            {
+                return $"Teacher: {person.FullName} taxId: {TaxID} ";
+            }
+        }
+
+        public Teacher(Person person, ulong taxID, Course[] courses): base (person,taxID)
         {            
             this.courses = courses;
         }
 
         public override string GetOfficialDuties()
         {
-            string duties = string.Empty;
+            string duties = $"{PersonInfo} Courses:";
             foreach (Course course in courses)
             {
                 duties += " " + course.Name;  

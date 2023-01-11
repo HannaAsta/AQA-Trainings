@@ -2,12 +2,21 @@
 {
     public class DegreeTeacher : Teacher
     {
-        string Sciencedegree;
-        string Degree;
-        public DegreeTeacher(Person person, long taxID, Course[] course, string Sciencedegree, string Degree) : base (person, taxID, course)
+        private string scienceDegree;
+        private string degree;
+        public override string PersonInfo
         {
-            this.Sciencedegree = Sciencedegree;
-            this.Degree= Degree;
-        }               
+            get
+            {
+                return $"DegreeTeacher: {person.FullName} TaxId: {TaxID} Degree: {degree} {scienceDegree}";
+            }
+        }
+
+        public DegreeTeacher(Person person, ulong taxID, Course[] course, string scienceDegree, string degree) 
+                            : base(person, taxID, course)
+        {
+            this.scienceDegree = scienceDegree;
+            this.degree = degree;
+        }             
     }
 }

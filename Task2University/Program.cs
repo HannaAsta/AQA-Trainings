@@ -1,6 +1,6 @@
 ﻿using Task2University;
 
-Person person = new Person("Varvara", "Pupkina");
+Person person  = new Person("Varvara", "Pupkina");
 Person person1 = new Person(" Homik", "Fine");
 Person person2 = new Person("Gusik", "Kokis");
 Person person3 = new Person("Makalin", " Danya");
@@ -26,16 +26,17 @@ DegreeTeacher degree = new DegreeTeacher (person4, 126546 , course4, "doctor", "
 
 UniversityEmployee[] employees = { teacher, staff, staff1, staff2, degree };
 
+Console.WriteLine("Teaches:");
 foreach (var employee in employees)
 {
     if (employee is Teacher)
     {
-       Console.WriteLine(employee.GetPersonName());
+       Console.WriteLine(employee.PersonInfo);
     }
 }
 
 Console.WriteLine();
-
+Console.WriteLine("All employees:");
 foreach (var employee in employees)
 {
      Console.WriteLine(employee.GetOfficialDuties());

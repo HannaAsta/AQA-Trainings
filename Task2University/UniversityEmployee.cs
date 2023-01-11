@@ -1,24 +1,23 @@
 ﻿namespace Task2University
 {
-    public class UniversityEmployee
+    public abstract class UniversityEmployee
     {
-        
-        public Person person;
-        public long taxiID;
+        protected Person person; 
+        public ulong TaxID { get; private set; }
 
-        public UniversityEmployee(Person person, long taxiID)
+        virtual public string PersonInfo 
+        {
+            get 
+            {
+                return $"Employee: {person.FullName} TaxId: {TaxID} ";
+            }
+        }
+        public UniversityEmployee(Person person, ulong numberTaxID)
         {
             this.person = person;
-            this.taxiID = taxiID;
+            TaxID = numberTaxID;
         }
-        virtual public string GetOfficialDuties()
-        {
-            return "Go to work";
-        }
-        public string GetPersonName()
-        {
-            return person.GetName();
-        }
-    }
 
+        abstract public string GetOfficialDuties();
+    }
 }

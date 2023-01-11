@@ -6,30 +6,31 @@
         Cleanperson,
         Driver
     }
+
     public class SupportStaff : UniversityEmployee
     {
-        Position position;
+        private Position position;
 
-        public SupportStaff(Person person, long taxiID, Position position) : base(person, taxiID)
+        public SupportStaff(Person person, ulong taxiID, Position position) : base(person, taxiID)
         {
             this.position = position;
         }
         public override string GetOfficialDuties()
         {
+            string duties = PersonInfo;
             switch (position)
             {
                 case Position.Driver:
-                    return "Driver drive a car";
+                    duties += " This Driver drive a car";
+                    break;
                 case Position.Cleanperson:
-                    return "Cleanperson clean the room";
+                    duties += " This Cleanperson clean the room";
+                    break;
                 case Position.Securityguard:
-                    return "Securityguard guards the room";
-                default: return position.ToString();
+                    duties += " This Securityguard guards the room";
+                    break;
             }
-                
-        }
-
-        
+            return duties;
+        } 
     }
-
 }

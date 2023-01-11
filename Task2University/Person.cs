@@ -4,14 +4,18 @@
     {
         private string last;
         private string first;
+
+        public string FullName
+        {
+            get
+            {
+                return $"{last} {first}";
+            }
+        }
         public Person(string lastName, string firstName)
         {
-                last = lastName;
-                first = firstName;
-        }
-        public string GetName()
-        {
-            return $"{last} {first}";
+            last = lastName;
+            first = firstName;
         }
     }
 }
