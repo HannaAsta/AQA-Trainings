@@ -2,12 +2,13 @@
 {
     public class Room
     {
-    int numberRoom;
-    string assignmentRoom;
-        public Room( int numberRoom, string assignmentRoom)
+        private int number;
+        private string assignment;
+
+        public Room(int number, string assignment)
         { 
-            this.numberRoom = numberRoom;
-            this.assignmentRoom = assignmentRoom;
+            this.number = number;
+            this.assignment = assignment;
         }
     }
 }

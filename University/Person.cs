@@ -11,5 +11,4 @@
             this.first = firstName;
         }
     }
-
 }

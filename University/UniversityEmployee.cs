@@ -3,13 +3,12 @@
     public class UniversityEmployee
     {
         protected Person person;
-        public ulong TaxID;
+        private ulong taxID;
 
         public UniversityEmployee(Person person, ulong taxID)
         {
             this.person = person;
-            this.TaxID = taxID;
+            this.taxID = taxID;
         }
-
     }
 }

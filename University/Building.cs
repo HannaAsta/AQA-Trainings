@@ -2,15 +2,13 @@
 {
     public class Building
     {
-        private Room room;
+        private Room[] rooms;
         private Adress adress;
-
-        public Building(Room room, Adress adress)
+        
+        public Building(Room[] rooms, Adress adress)
         {
-            this.room = room;
+            this.rooms = rooms;
             this.adress = adress;
         }   
     }
-
-
 }

@@ -2,15 +2,13 @@
 {
     public class Teacher : UniversityEmployee
     { 
-    private string lessons; 
-    private string degree;
-    public Teacher(Person person, ulong taxID, string lessons, string degree) : base(person, taxID)
+        private string[] courses; 
+        private string degree;
+
+        public Teacher(Person person, ulong taxID, string[] courses, string degree) : base(person, taxID)
         {
-          this.lessons = lessons;
-          this.degree = degree;
+            this.courses = courses;
+            this.degree = degree;
         }
     }
-}
-
-
-    
+}  

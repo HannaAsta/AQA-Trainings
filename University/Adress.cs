@@ -2,15 +2,15 @@
 {
     public class Adress
     {
-        public uint NumberLokal;
-        public string Street;
-        public string City;
+        private uint numberLokal;
+        private string street;
+        private string city;
 
         public Adress(uint numberLokal,string street, string city)
         { 
-            NumberLokal = numberLokal;  
-            Street = street;
-            City = city;
+            this.numberLokal = numberLokal;  
+            this.street = street;
+            this.city = city;
         }
     }
 }
