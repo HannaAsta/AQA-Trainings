@@ -3,19 +3,20 @@
     public class SubjectScore
     {
         private const uint MaxScore = 10;
-        private uint score;
-        public string Subject { get; private set; }
+        private uint _score;
+        public string Subject { get; set; }
+        
         public uint Score
         {
             get
             {
-                return score;
+                return _score;
             }
             set
             {
                 if (value <= MaxScore)
                 {
-                    score = value;
+                    _score = value;
                 }
             }   
         }

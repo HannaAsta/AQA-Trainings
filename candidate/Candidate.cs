@@ -2,26 +2,26 @@
 {
     public class Candidate
     {
-        private Person person;
-        private SubjectScore[] score;
+        public Person Person { get; set; }
+        public SubjectScore[] Score { get; set; }
 
         public string Street
         {
             get 
             {
-                return person.Address.Street;
+                return Person.Address.Street;
             }
         }
 
         public Candidate(Person person, SubjectScore[] score)
         {
-            this.person = person;
-            this.score = score;
+            Person = person;
+            Score = score;
         }
        
         public uint GetScore(string nameSub)
         {
-            foreach (SubjectScore score in score)
+            foreach (SubjectScore score in Score)
             {
                 if (score.Subject == nameSub)
                     return score.Score;         

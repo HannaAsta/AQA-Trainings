@@ -2,9 +2,9 @@
 {
     public class Address
     {
-        public uint NumberHome { get; private set; }
-        public uint NumberLokal { get; private set; } 
-        public string Street { get; private set; }
+        public uint NumberHome { get; set; }
+        public uint NumberLokal { get; set; } 
+        public string Street { get; set; }
         public string City { get; private set; }
     
         
