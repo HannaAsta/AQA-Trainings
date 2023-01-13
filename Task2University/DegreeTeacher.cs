@@ -2,21 +2,21 @@
 {
     public class DegreeTeacher : Teacher
     {
-        private string scienceDegree;
-        private string degree;
+        public string ScienceDegree { get; set; }
+        public string Degree { get; set; }
         public override string PersonInfo
         {
             get
             {
-                return $"DegreeTeacher: {person.FullName} TaxId: {TaxID} Degree: {degree} {scienceDegree}";
+                return $"DegreeTeacher: {Person.FullName} TaxId: {TaxId} Degree: {Degree} {ScienceDegree}";
             }
         }
 
-        public DegreeTeacher(Person person, ulong taxID, Course[] course, string scienceDegree, string degree) 
-                            : base(person, taxID, course)
+        public DegreeTeacher(Person person, ulong taxId, Course[] course, string scienceDegree, string degree) 
+                            : base(person, taxId, course)
         {
-            this.scienceDegree = scienceDegree;
-            this.degree = degree;
+            ScienceDegree = scienceDegree;
+            Degree = degree;
         }             
     }
 }

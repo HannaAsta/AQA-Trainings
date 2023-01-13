@@ -1,32 +1,28 @@
-﻿namespace Task2University
-{
-    public enum Position
-    {
-        Securityguard,
-        Cleanperson,
-        Driver
-    }
+﻿using static Task2University.Positions;
 
+namespace Task2University
+{
     public class SupportStaff : UniversityEmployee
     {
-        private Position position;
+        public Position Position { get; set; } 
 
-        public SupportStaff(Person person, ulong taxiID, Position position) : base(person, taxiID)
+        public SupportStaff(Person person, ulong taxiId, Position position) : base(person, taxiId)
         {
-            this.position = position;
+            Position = position;
         }
         public override string GetOfficialDuties()
         {
             string duties = PersonInfo;
-            switch (position)
+
+            switch (Position)
             {
                 case Position.Driver:
                     duties += " This Driver drive a car";
                     break;
-                case Position.Cleanperson:
+                case Position.CleanPerson:
                     duties += " This Cleanperson clean the room";
                     break;
-                case Position.Securityguard:
+                case Position.SecurityGuard:
                     duties += " This Securityguard guards the room";
                     break;
             }

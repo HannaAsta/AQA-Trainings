@@ -2,22 +2,21 @@
 {
     public abstract class UniversityEmployee
     {
-        protected Person person; 
-        public ulong TaxID { get; private set; }
+        public Person Person { get; set; }
+        public ulong TaxId { get; private set; }
 
         virtual public string PersonInfo 
         {
             get 
             {
-                return $"Employee: {person.FullName} TaxId: {TaxID} ";
+                return $"Employee: {Person.FullName} TaxId: {TaxId} ";
             }
         }
-        public UniversityEmployee(Person person, ulong numberTaxID)
+        public UniversityEmployee(Person person, ulong numberTaxId)
         {
-            this.person = person;
-            TaxID = numberTaxID;
+            Person = person;
+            TaxId = numberTaxId;
         }
-
         abstract public string GetOfficialDuties();
     }
 }

@@ -2,25 +2,25 @@
 {
     public class Teacher : UniversityEmployee
     {
-        private Course[] courses;
+       public Course[] Courses { get; set; }
 
         public override string PersonInfo
         {
             get
             {
-                return $"Teacher: {person.FullName} taxId: {TaxID} ";
+                return $"Teacher: {Person.FullName} taxId: {TaxId} ";
             }
         }
 
         public Teacher(Person person, ulong taxID, Course[] courses): base (person,taxID)
         {            
-            this.courses = courses;
+            Courses = courses;
         }
 
         public override string GetOfficialDuties()
         {
             string duties = $"{PersonInfo} Courses:";
-            foreach (Course course in courses)
+            foreach (Course course in Courses)
             {
                 duties += " " + course.Name;  
             }    

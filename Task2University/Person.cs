@@ -2,20 +2,20 @@
 {
     public class Person
     {
-        private string last;
-        private string first;
+        public string Last { get; set; }
+        public string First { get; set; }
 
         public string FullName
         {
             get
             {
-                return $"{last} {first}";
+                return $"{Last} {First}";
             }
         }
         public Person(string lastName, string firstName)
         {
-            last = lastName;
-            first = firstName;
+            Last = lastName;
+            First = firstName;
         }
     }
 }
