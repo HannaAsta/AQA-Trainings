@@ -1,14 +1,14 @@
 ﻿namespace University
 {
-    public class Building
+    internal class Building
     {
-        private Room[] rooms;
-        private Adress adress;
+        public Room[] Rooms;
+        public Adress Adress;
         
         public Building(Room[] rooms, Adress adress)
         {
-            this.rooms = rooms;
-            this.adress = adress;
+            Rooms = rooms;
+            Adress = adress;
         }   
     }
 }

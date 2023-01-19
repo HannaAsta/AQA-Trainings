@@ -1,12 +1,12 @@
 ﻿namespace University
 {
-    public class Rector : UniversityEmployee
+    internal class Rector : UniversityEmployee
     {
-        private string phoneNumber;
+        public string PhoneNumber { get; private set; }
 
-        public Rector(Person person, ulong taxID, string phoneNumber) : base(person, taxID)
+        public Rector(Person person, ulong taxId, string phoneNumber) : base(person, taxId)
         {
-            this.phoneNumber = phoneNumber;
+            PhoneNumber = phoneNumber;
         }
     }
 }

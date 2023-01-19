@@ -1,7 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Security.Claims;
 using University;
+using static University.Positions;
 
-public class Program
+internal class Program
 {
     static void Main(string[] args)
     {
@@ -27,6 +29,7 @@ public class Program
 
         UniversityEmployee[] employees = { rector, teacher, staff, staff1, staff2 };
 
+        
         Room room1 = new Room(545, "for lecturing");
         Room room2 = new Room(231, "for laboratory works");
         Room room3 = new Room(196, "for seminar works");
@@ -36,5 +39,6 @@ public class Program
         Building build2 = new Building(new Room[] { room3, room4 }, addr2);
         
         Univer univer = new Univer(rector, addr5, employees, new Building[] { build1, build2 });
+
     }
 }

@@ -1,19 +1,14 @@
-﻿namespace University
+﻿using static University.Positions;
+
+namespace University
 {
-        public enum Position
+       internal class SupportStaff : UniversityEmployee
         {
-            SecurityGuard,
-            CleanPerson,
-            Secretary,
-        }
+            public Position Position { get; set; }
 
-        public class SupportStaff : UniversityEmployee
-        {
-            private Position position;
-
-            public SupportStaff(Person person, ulong taxID, Position position) : base(person, taxID)
+            public SupportStaff(Person person, ulong taxId, Position position) : base(person, taxId)
             {
-                this.position = position;
+                Position = position;
             }
         }
     }

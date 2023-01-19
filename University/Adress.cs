@@ -1,16 +1,16 @@
 ﻿namespace University
 {
-    public class Adress
+    internal class Adress
     {
-        private uint numberLokal;
-        private string street;
-        private string city;
+        public uint NumberLokal { get; set; }
+        public string Street { get; set; }
+        public string City { get; set; }
 
         public Adress(uint numberLokal,string street, string city)
         { 
-            this.numberLokal = numberLokal;  
-            this.street = street;
-            this.city = city;
+            NumberLokal = numberLokal;  
+            Street = street;
+            City = city;
         }
     }
 }

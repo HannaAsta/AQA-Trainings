@@ -1,14 +1,14 @@
 ﻿namespace University
 {
-    public class UniversityEmployee
+    internal class UniversityEmployee
     {
-        protected Person person;
-        private ulong taxID;
+        public Person Person;
+        public ulong TaxId { get; set; }
 
-        public UniversityEmployee(Person person, ulong taxID)
+        public UniversityEmployee(Person person, ulong taxId)
         {
-            this.person = person;
-            this.taxID = taxID;
+            Person = person;
+            TaxId = taxId;
         }
     }
 }

@@ -1,14 +1,14 @@
 ﻿namespace University
 {
-    public class Teacher : UniversityEmployee
+    internal class Teacher : UniversityEmployee
     { 
-        private string[] courses; 
-        private string degree;
+     public string[] Courses; 
+     public string Degree;
 
-        public Teacher(Person person, ulong taxID, string[] courses, string degree) : base(person, taxID)
+        public Teacher(Person person, ulong taxId, string[] courses, string degree) : base(person, taxId)
         {
-            this.courses = courses;
-            this.degree = degree;
+            Courses = courses;
+            Degree = degree;
         }
     }
 }  

@@ -1,18 +1,18 @@
 ﻿namespace University
 {
-    public class Univer
+    internal class Univer
     {
-        UniversityEmployee[] employees;
-        Rector rector;
-        Building[] buildings;
-        Adress adress; 
+        public UniversityEmployee[] Employees;
+        public Rector Rector;
+        public Building[] Buildings;
+        public Adress Adress; 
 
         public Univer(Rector rector, Adress adress, UniversityEmployee[] employees, Building[] buildings)
         {
-            this.employees = employees;
-            this.rector = rector;
-            this.buildings = buildings;
-            this.adress = adress;
+           Employees = employees;
+           Rector = rector;
+           Buildings = buildings;
+           Adress = adress;
         }    
     }   
 }

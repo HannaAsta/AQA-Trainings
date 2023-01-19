@@ -1,14 +1,14 @@
 ﻿namespace University
 {
-    public class Person
+    internal class Person
     {
-        private string last;
-        private string first;
+        public string Last { get; private set; }
+        public string First { get; set; }
 
         public Person(string lastName, string firstName)
         {
-            this.last = lastName;
-            this.first = firstName;
+            Last = lastName;
+            First = firstName;
         }
     }
 }

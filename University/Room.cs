@@ -1,14 +1,14 @@
 ﻿namespace University
 {
-    public class Room
+    internal class Room
     {
-        private int number;
-        private string assignment;
+        public int Number { get; set; }
+        public string Assignment { get; set; }
 
         public Room(int number, string assignment)
         { 
-            this.number = number;
-            this.assignment = assignment;
+            Number = number;
+            Assignment = assignment;
         }
     }
 }
