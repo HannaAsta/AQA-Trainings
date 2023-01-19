@@ -2,13 +2,14 @@
 {
     internal class Teacher : UniversityEmployee
     { 
-     public string[] Courses; 
-     public string Degree;
+        public List<string> Courses { get; set; } 
+        public string Degree { get; set; }
 
-        public Teacher(Person person, ulong taxId, string[] courses, string degree) : base(person, taxId)
+        public Teacher(Person person, ulong taxId, List<string> courses, string degree) : base(person, taxId)
         {
             Courses = courses;
             Degree = degree;
+             
         }
     }
 }  

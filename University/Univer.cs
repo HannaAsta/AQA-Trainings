@@ -2,17 +2,25 @@
 {
     internal class Univer
     {
-        public UniversityEmployee[] Employees;
+        public List<UniversityEmployee> Employees { get; set; } = new List<UniversityEmployee>();
         public Rector Rector;
-        public Building[] Buildings;
-        public Adress Adress; 
+        public List<Building> Buildings { get; set; }
+        public Adress Adress;
 
-        public Univer(Rector rector, Adress adress, UniversityEmployee[] employees, Building[] buildings)
+        public Univer(Rector rector, Adress adress, List<Building> buildings)
         {
-           Employees = employees;
-           Rector = rector;
-           Buildings = buildings;
-           Adress = adress;
-        }    
-    }   
+            Rector = rector;
+            Buildings = buildings;
+            Adress = adress;
+        }
+        public bool AddEmployee(UniversityEmployee employee)
+        {
+            bool isExist = Employees.Exists(empl => empl.Equals(employee));
+            if (!isExist) 
+            {
+                Employees.Add(employee);
+            }    
+            return !isExist;
+        }
+    }
 }
