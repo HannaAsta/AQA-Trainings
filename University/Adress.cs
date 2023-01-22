@@ -12,5 +12,10 @@
             Street = street;
             City = city;
         }
+
+        public override string ToString()
+        {
+            return $"{City} {Street} {NumberLokal}";
+        }
     }
 }

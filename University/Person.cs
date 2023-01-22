@@ -7,6 +7,8 @@
 
         public Person(string lastName, string firstName)
         {
+            if (lastName.Length + firstName.Length > 15)
+                throw new ArgumentException("Last name and Fist name too long");
             Last = lastName;
             First = firstName;
         }

@@ -2,7 +2,7 @@
 {
     internal class Univer
     {
-        public List<UniversityEmployee> Employees { get; set; } = new List<UniversityEmployee>();
+        public List<UniversityEmployee> Employees { get; private set; } = new List<UniversityEmployee>();
         public Rector Rector;
         public List<Building> Buildings { get; set; }
         public Adress Adress;
