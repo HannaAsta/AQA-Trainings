@@ -12,7 +12,7 @@
         }
         public override bool Equals(object? obj)
         {
-            if (obj is Building)
+            if (obj != null && obj.GetType () == typeof(Building))
             {
                 Building building  = obj as Building;
                 return Adress == building.Adress;

@@ -5,53 +5,41 @@ using static University.Positions;
 
 internal class Program
 {
-    public class UniversityEmployeeComparer : IComparer<UniversityEmployee>
-    {
-        public int Compare(UniversityEmployee x, UniversityEmployee y)
-        {
-         // add code  
-            return 0;
-        }
-    }
-
     static void Main(string[] args)
     {
-        Person person1 = new Person("Koka", "Klava");
-        Person person2 = new Person("Fotus", "Vlad");
-        Person person3 = new Person("Huk", "Zinaida");
-        Person person4 = new Person("Huk", "Vova");
-        Person person5 = new Person("Burak", "Ivan");
-        Person person6 = new Person("Hukis", "Daryia");
+        var person1 = new Person("Koka", "Klava");
+        var person2 = new Person("Fotus", "Vlad");
+        var person3 = new Person("Huk", "Zinaida");
+        var person4 = new Person("Huk", "Vova");
+        var person5 = new Person("Burak", "Ivan");
+        var person6 = new Person("Hukis", "Daryia");
 
-        Adress addr1 = new Adress(12, "Plechanova", "Minsk");
-        Adress addr2 = new Adress(152, "Halturina", "Minsk");
-        Adress addr3 = new Adress(45, "Stadionnaya", "Minsk");
-        Adress addr4 = new Adress(85, "Pionerskaya", "Minsk");
-        Adress addr5 = new Adress(442, "Veselaya", "Minsk");
+        var addr1 = new Adress(12, "Plechanova", "Minsk");
+        var addr2 = new Adress(152, "Halturina", "Minsk");
+        var addr3 = new Adress(45, "Stadionnaya", "Minsk");
+        var addr4 = new Adress(85, "Pionerskaya", "Minsk");
+        var addr5 = new Adress(442, "Veselaya", "Minsk");
 
 
-        Rector rector = new Rector(person1, 55453312, "+48-551-12-54");
-        Teacher teacher = new Teacher(person2, 5471121, new List<string> { "chemistry", "mathematic" }, "Ph.D");
-        Teacher teacher1 = new Teacher(person6, 544554, new List<string> { "mathematic" }, "Ph.D");
+        var rector = new Rector(person1, 55453312, "+48-551-12-54");
+        var teacher = new Teacher(person2, 5471121, new List<string> { "chemistry", "mathematic" }, "Ph.D");
+        var teacher1 = new Teacher(person6, 544554, new List<string> { "mathematic" }, "Ph.D");
 
-        SupportStaff staff = new SupportStaff(person3, 122455, Position.SecurityGuard);
-        SupportStaff staff1 = new SupportStaff(person4, 5445, Position.CleanPerson);
-        SupportStaff staff2 = new SupportStaff(person5, 445454, Position.SecurityGuard);
+        var staff = new SupportStaff(person3, 122455, Position.SecurityGuard);
+        var staff1 = new SupportStaff(person4, 5445, Position.CleanPerson);
+        var staff2 = new SupportStaff(person5, 445454, Position.SecurityGuard);
 
-        List<UniversityEmployee> employees = new List<UniversityEmployee> { rector, teacher, staff, staff1, staff2, teacher1 };
+        List<UniversityEmployee> employees = new List<UniversityEmployee> 
+        { 
+            rector,
+            teacher,
+            staff,
+            staff1,
+            staff2,
+            teacher1
+        };
 
-        // OrderBy
-        var sortedEmployee = employees.OrderBy(empl => empl, new UniversityEmployeeComparer());
-
-        // Sort(IComaparer)
-        employees.Sort((e1, e2) => {
-            // add compare logic here
-            return 0;
-        });
-
-        // Sort
-        employees.Sort();
-
+        
         Room room1 = new Room(545, "for lecturing");
         Room room5 = new Room(545, "for lecturing");
         Room room2 = new Room(231, "for laboratory works");

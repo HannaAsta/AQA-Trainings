@@ -16,12 +16,15 @@
         }
         public override bool Equals(object? obj)
         {
-            if (obj is UniversityEmployee)
+            if (obj is UniversityEmployee employee)
             {
-                UniversityEmployee employee = obj as UniversityEmployee;
-                return employee.TaxId.Equals(TaxId); 
+               return TaxId == employee.TaxId; 
             }
             return false;
+        }
+        public override int GetHashCode()
+        {
+            return TaxId.GetHashCode();
         }
         public int CompareTo(object? obj)
         {

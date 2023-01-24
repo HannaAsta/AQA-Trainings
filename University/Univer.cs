@@ -15,12 +15,12 @@
         }
         public bool AddEmployee(UniversityEmployee employee)
         {
-            bool isExist = Employees.Exists(empl => empl.Equals(employee));
-            if (!isExist) 
-            {
-                Employees.Add(employee);
+            if (Employees.Contains(employee))
+            {            
+              return false;
             }    
-            return !isExist;
+            Employees.Add(employee);
+            return true;
         }
     }
 }
