@@ -40,21 +40,22 @@ internal class Program
         };
 
         
-        Room room1 = new Room(545, "for lecturing");
-        Room room5 = new Room(545, "for lecturing");
-        Room room2 = new Room(231, "for laboratory works");
-        Room room3 = new Room(196, "for seminar works");
-        Room room4 = new Room(745, "secondary");
+        var room1 = new Room(545, "for lecturing");
+        var room5 = new Room(545, "for lecturing");
+        var room2 = new Room(231, "for laboratory works");
+        var room3 = new Room(196, "for seminar works");
+        var room4 = new Room(745, "secondary");
 
 
-        Building build1 = new Building(new List<Room> { room1, room2 }, addr1);
-        Building build2 = new Building(new List<Room> { room3, room4, room5 }, addr2);
+        var build1 = new Building(new List<Room> { room1, room2 }, addr1);
+        var build2 = new Building(new List<Room> { room3, room4, room5 }, addr2);
 
         Univer univer = new Univer(rector, addr5, new List<Building> { build1, build2 });
         foreach (UniversityEmployee employee in employees)
         {
             univer.AddEmployee(employee);
         }
+        
         // task 1
         Console.WriteLine("Enter employee letter:");
         var letter = Console.ReadLine();
