@@ -5,4 +5,6 @@
 /*/obj
 /*/bin
 /.vs
-/.vs/AQA-Trainings/v17/.suo
+/.vs/*
+/candidate/obj/*
+/candidate/bin/*
