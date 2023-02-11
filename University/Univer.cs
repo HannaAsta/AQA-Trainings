@@ -1,6 +1,6 @@
 ﻿namespace University
 {
-    internal class Univer
+    public class Univer
     {
         public List<UniversityEmployee> Employees { get; private set; } = new List<UniversityEmployee>();
         public Rector Rector;

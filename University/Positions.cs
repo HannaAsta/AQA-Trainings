@@ -1,6 +1,6 @@
 ﻿namespace University
 {
-   internal class Positions
+   public class Positions
     { 
       public enum Position
       {

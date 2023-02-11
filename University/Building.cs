@@ -1,6 +1,6 @@
 ﻿namespace University
 {
-    internal class Building
+    public class Building
     {
         public List<Room> Rooms { get; set; }
         public Adress Adress;

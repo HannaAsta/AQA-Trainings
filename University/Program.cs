@@ -3,7 +3,7 @@ using System.Security.Claims;
 using University;
 using static University.Positions;
 
-internal class Program
+public class Program
 {
     static void Main(string[] args)
     {
@@ -45,8 +45,7 @@ internal class Program
         var room2 = new Room(231, "for laboratory works");
         var room3 = new Room(196, "for seminar works");
         var room4 = new Room(745, "secondary");
-
-
+        
         var build1 = new Building(new List<Room> { room1, room2 }, addr1);
         var build2 = new Building(new List<Room> { room3, room4, room5 }, addr2);
 
@@ -55,7 +54,16 @@ internal class Program
         {
             univer.AddEmployee(employee);
         }
+
+        // sort using CompareTo from IComparable
+        univer.Employees.Sort();
         
+        // sort using Compare from IComparer
+        univer.Employees.Sort(new UniversityEmployeeComparer());
+      
+        // sort with OrderBy
+        var sorted = univer.Employees.OrderBy(x => x, new UniversityEmployeeComparer());
+
         // task 1
         Console.WriteLine("Enter employee letter:");
         var letter = Console.ReadLine();
@@ -78,20 +86,24 @@ internal class Program
         // task 4
         Console.WriteLine("Enter room number:");
         var numberStr = Console.ReadLine();
-        int number = 0;
-        int.TryParse(numberStr, out number);
 
-        var buildingsWithRoomNumber = univer.Buildings.Where(building => building.Rooms.Any(room => room.Number == number));
+        int.TryParse(numberStr, out int number);
+        var buildingsWithRoomNumber = univer.Buildings
+            .Where(b => b.Rooms.Any(r => r.Number == number))
+            .Select(b => b.Adress.ToString());
 
-        Console.WriteLine(string.Join(", ", buildingsWithRoomNumber.Select(building => building.Adress.ToString())));
+        Console.WriteLine(string.Join(", ", buildingsWithRoomNumber));
 
         // task 5
-        var building = univer.Buildings.MaxBy(building => building.Rooms.Count());
+        var building = univer.Buildings
+            .MaxBy(building => building.Rooms.Count());
         Console.WriteLine(building.Adress.ToString());
 
         // task 6
-        var groupedEmployees = univer.Employees.GroupBy(employee => employee.Person.Last);
-        var maxOccur = groupedEmployees.MaxBy(gr => gr.LongCount());
-        Console.WriteLine($"{maxOccur.Key}: {maxOccur.LongCount()}");
+        var groupedEmployees = univer.Employees
+            .GroupBy(emp => emp.Person.Last)
+            .MaxBy(gr => gr.LongCount());
+
+        Console.WriteLine($"{groupedEmployees?.Key}: {groupedEmployees?.LongCount()}");
     }
 }

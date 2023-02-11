@@ -1,6 +1,6 @@
 ﻿namespace University
 {
-    internal class Adress
+     public class Adress
     {
         public uint NumberLokal { get; set; }
         public string Street { get; set; }
