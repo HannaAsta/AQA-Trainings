@@ -10,11 +10,11 @@
             Rooms = rooms;
             Adress = adress;
         }
+        
         public override bool Equals(object? obj)
         {
-            if (obj != null && obj.GetType () == typeof(Building))
+            if (obj is Building building)
             {
-                Building building  = obj as Building;
                 return Adress == building.Adress;
             }
             return false;

@@ -1,7 +1,7 @@
 ﻿namespace University
 {
      public class Adress
-    {
+     {
         public uint NumberLokal { get; set; }
         public string Street { get; set; }
         public string City { get; set; }
@@ -17,5 +17,5 @@
         {
             return $"{City} {Street} {NumberLokal}";
         }
-    }
+     }
 }

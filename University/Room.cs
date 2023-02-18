@@ -12,9 +12,8 @@
         }
         public override bool Equals(object? obj)
         {
-            if (obj is Room)
+            if (obj is Room room)
             {
-                Room room = obj as Room;
                 return Number == room.Number && Assignment == room.Assignment;
             }
             return false;

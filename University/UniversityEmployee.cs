@@ -28,12 +28,9 @@
         }
         public int CompareTo(object? obj)
         {
-            if (obj is UniversityEmployee)
+            if (obj is UniversityEmployee employee)
             {
-                var current = Person.FullNameLength;
-                var employee = (obj as UniversityEmployee);
-                var compareTo = employee.Person.FullNameLength;
-                return compareTo - current;
+                return employee.Person.FullNameLength - Person.FullNameLength;
             }
             return -1;
         }

@@ -7,6 +7,7 @@ namespace University
     {
         public string Last { get; private set; }
         public string First { get; set; }
+
         public int FullNameLength 
         {
             get

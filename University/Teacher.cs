@@ -1,6 +1,6 @@
 ﻿namespace University
 {
-    internal class Teacher : UniversityEmployee
+     public class Teacher : UniversityEmployee
     { 
         public List<string> Courses { get; set; } 
         public string Degree { get; set; }
@@ -9,7 +9,6 @@
         {
             Courses = courses;
             Degree = degree;
-             
         }
     }
 }  
