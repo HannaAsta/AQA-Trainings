@@ -23,6 +23,7 @@ namespace UniversityUnitTests
             var resultRoom2 = new Room(69, "Academic");
 
             Assert.IsTrue(resultRoom1.Equals(resultRoom2));
+            Assert.IsTrue(resultRoom1.GetHashCode().Equals(resultRoom2.GetHashCode()));
         }
     }
 }

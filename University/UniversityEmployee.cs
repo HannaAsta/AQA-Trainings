@@ -1,6 +1,6 @@
 ﻿namespace University
 {
-    public class UniversityEmployee: IComparable 
+    public class UniversityEmployee: IComparable<UniversityEmployee> 
     {
         public Person Person { get; set; }
         public uint TaxId { get; set; }
@@ -26,11 +26,11 @@
         {
             return TaxId.GetHashCode();
         }
-        public int CompareTo(object? obj)
+        public int CompareTo(UniversityEmployee? obj)
         {
-            if (obj is UniversityEmployee employee)
+            if (obj != null)
             {
-                return employee.Person.FullNameLength - Person.FullNameLength;
+                return obj.Person.FullNameLength.CompareTo(Person.FullNameLength);
             }
             return -1;
         }

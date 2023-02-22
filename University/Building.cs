@@ -19,5 +19,9 @@
             }
             return false;
         }
+        public override int GetHashCode() 
+        {
+            return Adress.GetHashCode();
+        }
     }
 }

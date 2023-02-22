@@ -24,8 +24,8 @@ namespace UniversityUnitTests
         [TestMethod]
         public void EmployeesComparerLess()
         {
-            UniversityEmployee addEmployee = new Teacher(new Person("Gsdfck", "Huk"), 42471121, new List<string> { "physics", "mathematic" }, "Ph.D");
-            UniversityEmployee addRector = new Rector(new Person("Hasda", "Hfd"), 872471451, "54654131");
+            UniversityEmployee addEmployee = new Teacher(new Person("Gsdfck", "Huk"), 12, new List<string> { "physics", "mathematic" }, "Ph.D");
+            UniversityEmployee addRector = new Rector(new Person("Hasda", "Hfd"), 871, "54654131");
 
             Assert.IsTrue(addEmployee.CompareTo(addRector) < 0);
         }
@@ -49,7 +49,7 @@ namespace UniversityUnitTests
         [ExpectedException(typeof(ArgumentException))]
         public void UniversityEmployeeArgumentExeption()
         {
-            new UniversityEmployee(new Person("Gdfvs", "Sfr"), 0);
+            _ = new UniversityEmployee(new Person("Gdfvs", "Sfr"), 0);
         }
     }
 }

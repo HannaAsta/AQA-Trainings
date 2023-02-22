@@ -24,6 +24,5 @@ namespace UniversityUnitTests
             Assert.AreNotEqual(build1, build2);
             Assert.AreEqual(build2, build3);
         }
-
     }
 }

@@ -62,7 +62,7 @@ public class Program
         univer.Employees.Sort(new UniversityEmployeeComparer());
       
         // sort with OrderBy
-        var sorted = univer.Employees.OrderBy(x => x, new UniversityEmployeeComparer());
+        var sorted = univer.Employees.OrderBy(x => x);
 
         // task 1
         Console.WriteLine("Enter employee letter:");
