@@ -6,7 +6,6 @@
         public Rector Rector;
         public List<Building> Buildings { get; set; }
         public Adress Adress;
-
         public Univer(Rector rector, Adress adress, List<Building> buildings)
         {
             Rector = rector;

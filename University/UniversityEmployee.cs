@@ -4,7 +4,6 @@
     {
         public Person Person { get; set; }
         public uint TaxId { get; set; }
-
         public UniversityEmployee(Person person, uint taxId)
         {
             if (taxId <= 0)

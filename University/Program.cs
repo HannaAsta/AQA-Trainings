@@ -2,7 +2,6 @@
 using System.Security.Claims;
 using University;
 using static University.Positions;
-
 public class Program
 {
     static void Main(string[] args)
@@ -19,7 +18,6 @@ public class Program
         var addr3 = new Adress(45, "Stadionnaya", "Minsk");
         var addr4 = new Adress(85, "Pionerskaya", "Minsk");
         var addr5 = new Adress(442, "Veselaya", "Minsk");
-
 
         var rector = new Rector(person1, 55453312, "+48-551-12-54");
         var teacher = new Teacher(person2, 5471121, new List<string> { "chemistry", "mathematic" }, "Ph.D");
@@ -38,8 +36,7 @@ public class Program
             staff2,
             teacher1
         };
-
-        
+             
         var room1 = new Room(545, "for lecturing");
         var room5 = new Room(545, "for lecturing");
         var room2 = new Room(231, "for laboratory works");
@@ -67,16 +64,13 @@ public class Program
         // task 1
         Console.WriteLine("Enter employee letter:");
         var letter = Console.ReadLine();
-
         var sortedEmployees = univer.Employees.Where(x => x.Person.Last.StartsWith(letter)).OrderBy(x => x.TaxId);
-
         var outputEmployees = sortedEmployees.Select(x => $"{x.Person.Last}: {x.TaxId}");
         Console.WriteLine(string.Join(", ", outputEmployees));
 
         // task 2
         Console.WriteLine("Enter course:");
         var course = Console.ReadLine();
-
         var courseTeachers = univer.Employees.Where(x => x is Teacher && (x as Teacher).Courses.Contains(course));
         Console.WriteLine(string.Join(", ", courseTeachers.Select(x => $"{x.Person.First} {x.Person.Last}")));
 

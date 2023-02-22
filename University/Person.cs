@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
-
 namespace University
 {
     public class Person
     {
         public string Last { get; private set; }
         public string First { get; set; }
-
         public int FullNameLength 
         {
             get
